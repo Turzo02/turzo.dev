@@ -1,8 +1,11 @@
-import React from 'react';
-import { Download, Github, Verified } from 'lucide-react';
+import React from "react";
+import { Download, Github, Verified } from "lucide-react";
 
 export const HeroSection = () => (
-  <section id="hero" className="min-h-screen w-full flex items-center justify-center pt-32 pb-12 px-4 md:px-8 overflow-hidden">
+  <section
+    id="hero"
+    className="min-h-screen w-full flex items-center justify-center pt-32 pb-12 px-4 md:px-8 overflow-hidden"
+  >
     <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
       <div className="flex flex-col gap-8 order-2 md:order-1">
         <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 dark:bg-indigo-500/5 w-fit backdrop-blur-xl">
@@ -10,19 +13,31 @@ export const HeroSection = () => (
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
           </span>
-          <span className="text-[10px] font-black text-indigo-600 dark:text-indigo-400 tracking-[0.2em] uppercase">Open for Innovation</span>
+          <span className="text-[10px] font-black text-indigo-600 dark:text-indigo-400 tracking-[0.2em] uppercase">
+            Open for Innovation
+          </span>
         </div>
         <h1 className="text-6xl md:text-8xl font-black leading-[0.95] tracking-tighter text-slate-900 dark:text-white">
-          CRAFTING <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-cyan-400">FLAWLESS</span> INTERFACES
+          CRAFTING{" "}
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-cyan-400">
+            FLAWLESS
+          </span>{" "}
+          INTERFACES
         </h1>
         <p className="text-xl text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed font-medium">
-          I'm a Junior Frontend Architect specializing in building immersive, high-performance web applications with a focus on modern aesthetics.
+          I'm a frontend developer focused on crafting clean, responsive, and
+          engaging web interfaces, with basic backend integration experience and
+          actively exploring full-stack development to build functional,
+          maintainable, and performant applications.
         </p>
         <div className="flex flex-wrap gap-5 pt-4">
-          <button className="flex items-center justify-center gap-3 h-14 px-8 bg-indigo-600 text-white text-base font-bold rounded-2xl hover:bg-indigo-700 transition-all shadow-2xl shadow-indigo-500/40 active:scale-95">
+          <button className="flex items-center justify-center gap-3 h-14 px-8 bg-indigo-600 text-white text-base font-bold cursor-pointer rounded-2xl hover:bg-indigo-700 transition-all shadow-2xl shadow-indigo-500/40 active:scale-95">
             Portfolio CV <Download size={20} />
           </button>
-          <button className="flex items-center justify-center gap-3 h-14 px-8 bg-white/20 dark:bg-white/5 border border-slate-300 dark:border-white/10 hover:border-indigo-500/50 text-slate-900 dark:text-white text-base font-bold rounded-2xl transition-all backdrop-blur-xl">
+          <button
+            onClick={() => window.open("https://github.com/Turzo02", "_blank")}
+            className="flex items-center justify-center gap-3 h-14 px-8 bg-white/20 dark:bg-white/5 border border-slate-300 dark:border-white/10 hover:border-indigo-500/50 text-slate-900 dark:text-white text-base font-bold cursor-pointer rounded-2xl transition-all backdrop-blur-xl"
+          >
             GitHub <Github size={20} />
           </button>
         </div>
@@ -31,15 +46,19 @@ export const HeroSection = () => (
       <div className="order-1 md:order-2 flex justify-center relative group">
         <div className="absolute inset-0 bg-indigo-500/30 dark:bg-indigo-500/20 blur-[100px] rounded-full scale-90 group-hover:scale-110 transition-transform duration-1000"></div>
         <div className="relative w-full max-w-112.5 aspect-4/5 rounded-[3rem] overflow-hidden border border-white/40 dark:border-white/10 bg-white/10 dark:bg-slate-900/50 shadow-2xl transition-all duration-700 group-hover:rotate-1">
-          <img 
-            src="https://i.ibb.co.com/kgHZkzZr/turzo.jpg" 
+          <img
+            src="https://i.ibb.co.com/kgHZkzZr/turzo.jpg"
             className="w-full h-full object-cover dark:opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
             alt="Profile"
           />
           <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/40 dark:bg-black/60 backdrop-blur-2xl rounded-3xl border border-white/40 dark:border-white/10 flex items-center justify-between shadow-2xl">
             <div>
-              <p className="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-black tracking-widest">Industry Pulse</p>
-              <p className="text-slate-900 dark:text-white font-black text-xl">Top Rated</p>
+              <p className="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-black tracking-widest">
+                   Lifelong Learner
+              </p>
+              <p className="text-slate-900 dark:text-white font-black text-xl">
+               Exploring Full-Stack
+              </p>
             </div>
             <div className="size-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
               <Verified size={24} />
