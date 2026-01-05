@@ -32,7 +32,7 @@ export const HeroSection = () => (
         <div className="absolute inset-0 bg-indigo-500/30 dark:bg-indigo-500/20 blur-[100px] rounded-full scale-90 group-hover:scale-110 transition-transform duration-1000"></div>
         <div className="relative w-full max-w-112.5 aspect-4/5 rounded-[3rem] overflow-hidden border border-white/40 dark:border-white/10 bg-white/10 dark:bg-slate-900/50 shadow-2xl transition-all duration-700 group-hover:rotate-1">
           <img 
-            src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=800&auto=format&fit=crop" 
+            src="https://i.ibb.co.com/kgHZkzZr/turzo.jpg" 
             className="w-full h-full object-cover dark:opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
             alt="Profile"
           />
