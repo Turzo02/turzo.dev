@@ -44,9 +44,7 @@ export const AboutSection = () => {
               </p>
 
               <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 font-medium italic">
-                Life outside the code fuels my creativity—gaming and
-                story-driven experiences inspire new ideas and keep my approach
-                fresh, helping me craft engaging and elegant web applications.
+             My hobbies—traveling and gaming—keep me energized, sharpen my focus, and inspire new ways of thinking.
               </p>
             </div>
           </div>

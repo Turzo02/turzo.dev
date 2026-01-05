@@ -3,7 +3,7 @@ import { Download, Github, Verified } from "lucide-react";
 
 export const HeroSection = () => (
   <section
-    id="hero"
+    id="home"
     className="min-h-screen w-full flex items-center justify-center pt-32 pb-12 px-4 md:px-8 overflow-hidden"
   >
     <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -17,22 +17,24 @@ export const HeroSection = () => (
             Open for Innovation
           </span>
         </div>
+        {/* Professional Designation Heading */}
         <h1 className="text-6xl md:text-8xl font-black leading-[0.95] tracking-tighter text-slate-900 dark:text-white">
-          CRAFTING{" "}
+          FRONTEND{" "}
           <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-cyan-400">
-            FLAWLESS
+            WEB
           </span>{" "}
-          INTERFACES
+          DEVELOPER
         </h1>
+
         <p className="text-xl text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed font-medium">
-          I'm a frontend developer focused on crafting clean, responsive, and
-          engaging web interfaces, with basic backend integration experience and
-          actively exploring full-stack development to build functional,
-          maintainable, and performant applications.
+          I build high-performance, responsive web interfaces with a focus on
+          clean design and seamless full-stack integration to deliver
+          functional, user-centric applications.
         </p>
+
         <div className="flex flex-wrap gap-5 pt-4">
-          <button className="flex items-center justify-center gap-3 h-14 px-8 bg-indigo-600 text-white text-base font-bold cursor-pointer rounded-2xl hover:bg-indigo-700 transition-all shadow-2xl shadow-indigo-500/40 active:scale-95">
-            Portfolio CV <Download size={20} />
+          <button className="flex items-center justify-center gap-3 h-14 px-8 bg-indigo-600 text-white  text-lg font-bold cursor-pointer rounded-2xl hover:bg-indigo-700 transition-all shadow-2xl shadow-indigo-500/40 active:scale-95">
+            Resume <Download size={20} />
           </button>
           <button
             onClick={() => window.open("https://github.com/Turzo02", "_blank")}
@@ -54,10 +56,10 @@ export const HeroSection = () => (
           <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/40 dark:bg-black/60 backdrop-blur-2xl rounded-3xl border border-white/40 dark:border-white/10 flex items-center justify-between shadow-2xl">
             <div>
               <p className="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-black tracking-widest">
-                   Lifelong Learner
+                Lifelong Learner
               </p>
               <p className="text-slate-900 dark:text-white font-black text-xl">
-               Exploring Full-Stack
+                Exploring Full-Stack
               </p>
             </div>
             <div className="size-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
