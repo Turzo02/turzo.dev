@@ -49,7 +49,7 @@ export default function App() {
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
-        <ExperienceSection />
+        {/* <ExperienceSection /> */}
         <ContactSection />
       </main>
 

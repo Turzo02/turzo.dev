@@ -6,9 +6,9 @@ export const ContactSection = () => (
     <div className="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 bg-white/40 dark:bg-white/5 border border-white dark:border-white/10 backdrop-blur-3xl p-10 md:p-20 rounded-[4rem] shadow-2xl">
       <div className="flex flex-col justify-between py-4">
         <div>
-          <h2 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-8 leading-tight tracking-tighter">LET'S BUILD <br/> THE FUTURE</h2>
+          <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-tight tracking-tighter">LET'S BUILD <br/> THE FUTURE</h2>
           <p className="text-slate-600 dark:text-slate-400 text-xl font-medium mb-12 max-w-sm leading-relaxed">
-            Available for select freelance engagements and full-time visionary roles.
+           Open to collaborations and visionary web development roles.
           </p>
         </div>
         <div className="space-y-6">
@@ -16,13 +16,13 @@ export const ContactSection = () => (
             <div className="size-14 rounded-2xl bg-indigo-600 text-white flex items-center justify-center shadow-lg group-hover:rotate-12 transition-transform">
               <Mail size={24} />
             </div>
-            <span className="text-xl font-black italic">HELLO@DEV.IO</span>
+            <span className="text-xl font-black italic">TURZO@DEV.IO</span>
           </a>
           <div className="flex items-center gap-5 text-slate-900 dark:text-white">
             <div className="size-14 rounded-2xl bg-white/50 dark:bg-white/10 flex items-center justify-center border border-white dark:border-white/10">
               <MapPin size={24} />
             </div>
-            <span className="text-xl font-bold">SAN FRANCISCO, CA</span>
+            <span className="text-xl font-bold">Rangpur, Bangladesh</span>
           </div>
         </div>
       </div>
