@@ -1,6 +1,5 @@
 import React from "react";
 import { Download, Github, Verified } from "lucide-react";
-
 export const HeroSection = () => (
   <section
     id="home"
@@ -46,16 +45,16 @@ export const HeroSection = () => (
       </div>
 
       <div className="order-1 md:order-2 flex justify-center relative group">
-        <div className="absolute inset-0 bg-indigo-500/30 dark:bg-indigo-500/20 blur-[100px] rounded-full scale-90 group-hover:scale-110 transition-transform duration-1000"></div>
+        <div className="absolute inset-0 bg-black/30 dark:bg-bg-black/50 blur-[100px] rounded-full scale-70 group-hover:scale-90 transition-transform duration-1000"></div>
         <div className="relative w-full max-w-112.5 aspect-4/5 rounded-[3rem] overflow-hidden border border-white/40 dark:border-white/10 bg-white/10 dark:bg-slate-900/50 shadow-2xl transition-all duration-700 group-hover:rotate-1">
           <img
-            src="https://i.ibb.co.com/kgHZkzZr/turzo.jpg"
+            src={"https://i.ibb.co.com/C3Dpp6p1/brown.jpg"}
             className="w-full h-full object-cover dark:opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
             alt="Profile"
           />
           <div className="absolute bottom-8 left-8 right-8 p-6 bg-white/40 dark:bg-black/60 backdrop-blur-2xl rounded-3xl border border-white/40 dark:border-white/10 flex items-center justify-between shadow-2xl">
             <div>
-              <p className="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-black tracking-widest">
+              <p className="text-[10px] text-indigo-700 dark:text-white uppercase font-black tracking-widest">
                 Lifelong Learner
               </p>
               <p className="text-slate-900 dark:text-white font-black text-xl">

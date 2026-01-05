@@ -5,7 +5,6 @@ import App from './App.jsx'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import HomePage from './Pages/HomePage.jsx';
-import PDE from './Pages/PDE.jsx';
 import ProjectDetails from './Pages/ProjectDetailsPage.jsx';
 
 const router = createBrowserRouter([

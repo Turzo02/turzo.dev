@@ -3,9 +3,8 @@ import { ExternalLink, Code2 } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { Link } from 'react-router';
 
-export const ProjectCard = ({ id, title, description, tags, image, demoUrl, codeUrl }) => {
+export const ProjectCard = ({ id, title, description, tags, image, }) => {
   const [ref, isVisible] = useScrollReveal();
-  console.log(id)
   return (
     <div 
       ref={ref}
@@ -19,8 +18,8 @@ export const ProjectCard = ({ id, title, description, tags, image, demoUrl, code
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
         />
         <div className="absolute top-4 right-4 z-20 flex gap-2">
-          {tags.map(tag => (
-            <span key={tag} className="px-3 py-1 bg-white/20 dark:bg-black/40 backdrop-blur-xl rounded-full text-[10px] font-bold text-slate-800 dark:text-white border border-white/20 uppercase tracking-widest">
+          {tags.map((tag,i) => (
+            <span key={i} className="px-3 py-1 bg-white/20 dark:bg-black/40 backdrop-blur-xl rounded-full text-[10px] font-bold text-slate-800 dark:text-white border border-white/20 uppercase tracking-widest">
               {tag}
             </span>
           ))}

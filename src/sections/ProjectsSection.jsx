@@ -4,7 +4,6 @@ import { ProjectCard } from '../components/ProjectCard';
 import { projects } from '../data/projects';
 
 const ProjectsSection = () => {
-  console.log(projects)
   return (
      <section id="projects" className="w-full py-32 bg-indigo-500/5 dark:bg-white/2">
     <div className="max-w-7xl w-full mx-auto">
