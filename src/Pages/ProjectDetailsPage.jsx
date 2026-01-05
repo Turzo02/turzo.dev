@@ -10,21 +10,24 @@ import {
   Code2, 
   CheckCircle2 
 } from 'lucide-react';
+import { useNavigate, useParams } from 'react-router';
+import { projects } from '../data/projects';
 
-const ProjectDetails = ({ project, onBack }) => {
-  // If no project is selected (e.g., direct URL access or state loss), return nothing or a loader
-  if (!project) return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="animate-spin size-8 border-4 border-indigo-500 border-t-transparent rounded-full"></div>
-    </div>
-  );
-
+const ProjectDetails = () => {
+  const navigate = useNavigate();
+  
+  const { id } = useParams();
+  const project = projects.find((p) => p.id === Number(id));
+ 
+  const HandleGoHome = () => {
+      navigate('/');
+  }
   return (
     <div className="min-h-screen pt-32 pb-20 px-4 md:px-8 max-w-6xl mx-auto animate-in fade-in slide-in-from-bottom-6 duration-700">
       
       {/* Navigation Header */}
       <button 
-        onClick={onBack}
+      onClick={HandleGoHome}
         className="group mb-12 flex items-center gap-3 text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-white transition-all font-black uppercase tracking-[0.2em] text-xs"
       >
         <div className="size-10 rounded-2xl bg-white/10 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-lg group-hover:rotate-[-10deg]">
@@ -103,11 +106,7 @@ const ProjectDetails = ({ project, onBack }) => {
               <h3 className="font-black uppercase tracking-[0.2em] text-xs">Technical Challenges</h3>
             </div>
             <div className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed space-y-4">
-              {project.challenges ? (
-                <p>{project.challenges}</p>
-              ) : (
-                <p>Navigating the complexities of distributed state management and real-time synchronization using IPFS nodes. The primary hurdle was ensuring a seamless UI update cycle during heavy audio packet decryption.</p>
-              )}
+              <p>{project.challenges}</p>
             </div>
           </section>
 
@@ -117,35 +116,12 @@ const ProjectDetails = ({ project, onBack }) => {
               <div className="size-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center group-hover:-rotate-12 transition-transform">
                 <Compass size={24} />
               </div>
-              <h3 className="font-black uppercase tracking-[0.2em] text-xs">Future Roadmap</h3>
+              <h3 className="font-black uppercase tracking-[0.2em] text-xs">Future Improvements</h3>
             </div>
             <div className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
-              {project.potentialImprovements ? (
-                 <p>{project.potentialImprovements}</p>
-              ) : (
-                 <p>Implementing a custom caching layer to reduce peer lookup latency and adding native mobile push notifications for community curation alerts.</p>
-              )}
+              <p>{project.potentialImprovements}</p>
             </div>
-            <ul className="grid grid-cols-1 gap-3">
-              {["PWA Implementation", "Enhanced Analytics", "Multi-chain Support"].map((step, idx) => (
-                <li key={idx} className="flex items-center gap-3 text-xs font-bold text-slate-500 dark:text-slate-400">
-                  <CheckCircle2 size={14} className="text-emerald-500" /> {step}
-                </li>
-              ))}
-            </ul>
           </section>
-
-          {/* Bottom Badge */}
-          <div className="p-6 bg-indigo-500/5 dark:bg-white/3 border border-dashed border-indigo-500/30 rounded-3xl flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Cpu className="text-indigo-500" size={20} />
-              <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Status: Optimized</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Code2 className="text-indigo-500" size={20} />
-              <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Stack: Verified</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>

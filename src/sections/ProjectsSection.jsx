@@ -3,8 +3,10 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { ProjectCard } from '../components/ProjectCard';
 import { projects } from '../data/projects';
 
-export const ProjectsSection = () => (
-  <section id="projects" className="w-full py-32 bg-indigo-500/5 dark:bg-white/2">
+const ProjectsSection = () => {
+  console.log(projects)
+  return (
+     <section id="projects" className="w-full py-32 bg-indigo-500/5 dark:bg-white/2">
     <div className="max-w-7xl w-full mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 px-4 md:px-12">
         <div className="max-w-xl">
@@ -25,4 +27,7 @@ export const ProjectsSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
+
+export default ProjectsSection;

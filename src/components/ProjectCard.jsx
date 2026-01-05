@@ -1,9 +1,11 @@
 import React from 'react';
 import { ExternalLink, Code2 } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { Link } from 'react-router';
 
-export const ProjectCard = ({ title, description, tags, image, demoUrl, codeUrl }) => {
+export const ProjectCard = ({ id, title, description, tags, image, demoUrl, codeUrl }) => {
   const [ref, isVisible] = useScrollReveal();
+  console.log(id)
   return (
     <div 
       ref={ref}
@@ -28,14 +30,14 @@ export const ProjectCard = ({ title, description, tags, image, demoUrl, codeUrl 
         <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-indigo-500 transition-colors">{title}</h3>
         <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">{description}</p>
         <div className="flex gap-6">
-          <a href={demoUrl} className="text-indigo-600 dark:text-indigo-400 font-bold hover:gap-2 transition-all flex items-center gap-1">
+          <Link to={`/project/${id}`} className="text-indigo-600 dark:text-indigo-400 font-bold hover:gap-2 transition-all flex items-center gap-1">
             Live Demo <ExternalLink size={16} />
-          </a>
-          <a href={codeUrl} className="text-slate-800 dark:text-white font-bold hover:opacity-70 transition-all flex items-center gap-1">
-            Source <Code2 size={16} />
-          </a>
+          </Link>
+
         </div>
       </div>
     </div>
   );
 };
+
+

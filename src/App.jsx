@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Navbar } from "./components/Navbar";
-import { HeroSection } from "./sections/HeroSection";
-import { AboutSection } from "./sections/AboutSection";
-import { SkillsSection } from "./sections/SkillsSection";
-import { ProjectsSection } from "./sections/ProjectsSection";
-import { ExperienceSection } from "./sections/ExperienceSection";
-import { ContactSection } from "./sections/ContactSection";
+import { Outlet } from "react-router";
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
@@ -45,12 +40,7 @@ export default function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
       <main className="z-10 relative">
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        {/* <ExperienceSection /> */}
-        <ContactSection />
+         <Outlet />
       </main>
 
       <footer className="w-full py-12 border-t border-slate-200 dark:border-white/5 bg-white/20 dark:bg-black/40 backdrop-blur-2xl">
