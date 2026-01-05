@@ -1,7 +1,7 @@
 export const projects = [
     {
     id: 1,
-    title: "TicketZone — Online Ticket Booking Platform",
+    title: "TicketZone",
     image:
       "https://i.ibb.co.com/3yh5dYtY/ticket-ZOne.png",
     tags: ["MongoDB", "Express", "React", "Node.js", "Stripe", "Firebase"],

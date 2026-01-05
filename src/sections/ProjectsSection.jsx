@@ -1,31 +1,45 @@
 import React from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { ProjectCard } from '../components/ProjectCard';
 import { projects } from '../data/projects';
 
 const ProjectsSection = () => {
   return (
-     <section id="projects" className="w-full py-32 bg-indigo-500/5 dark:bg-white/2">
-    <div className="max-w-7xl w-full mx-auto">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-16 px-4 md:px-12">
-        <div className="max-w-xl">
-          <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6 leading-none">SIGNATURE WORKS</h2>
-          <p className="text-slate-500 dark:text-slate-400 font-medium">Experimental builds and commercial projects that push the boundaries of frontend engineering.</p>
+    <section id="projects" className="w-full py-20 md:py-32  px-4 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+        
+        {/* Header Section */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16 md:mb-24">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-8 h-0.5 bg-indigo-500"></span>
+              <span className="text-indigo-500 font-bold tracking-widest text-sm uppercase">Selected Portfolio</span>
+            </div>
+            <h2 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-6 tracking-tight leading-[0.9]">
+              SIGNATURE <br className="hidden md:block" /> WORKS
+            </h2>
+            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+              Experimental builds and commercial projects that push the boundaries of frontend engineering.
+            </p>
+          </div>
+          
+          {/* Optional Counter for UI Polish */}
+          <div className="hidden md:block">
+            <span className="text-8xl font-black text-slate-400 dark:text-white/5 select-none">
+              {projects.length.toString().padStart(2, '0')}
+            </span>
+          </div>
         </div>
-        <div className="hidden md:flex gap-4">
-          <button className="size-14 rounded-2xl border border-slate-300 dark:border-white/10 bg-white/40 dark:bg-white/5 hover:bg-indigo-500 hover:text-white flex items-center justify-center transition-all shadow-sm">
-            <ChevronLeft />
-          </button>
-          <button className="size-14 rounded-2xl border border-slate-300 dark:border-white/10 bg-indigo-600 text-white flex items-center justify-center transition-all shadow-xl shadow-indigo-500/20 active:scale-90">
-            <ChevronRight />
-          </button>
+        {/* Responsive Grid System */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-6">
+          {projects.map((p, i) => (
+            <div key={i} > 
+              <ProjectCard {...p} />
+            </div>
+          ))}
         </div>
+        
       </div>
-      <div className="flex overflow-x-auto gap-8 pb-12 px-4 md:px-12 no-scrollbar snap-x snap-mandatory">
-        {projects.map(p => <ProjectCard key={p.title} {...p} />)}
-      </div>
-    </div>
-  </section>
+    </section>
   );
 };
 

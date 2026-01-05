@@ -1,42 +1,81 @@
 import React from 'react';
-import { ExternalLink, Code2 } from 'lucide-react';
+import { ExternalLink, ArrowRight } from 'lucide-react'; // Added ArrowRight for style
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { Link } from 'react-router';
 
-export const ProjectCard = ({ id, title, description, tags, image, }) => {
+export const ProjectCard = ({ id, title, description, image }) => {
   const [ref, isVisible] = useScrollReveal();
+
   return (
-    <div 
+    <div
       ref={ref}
-      className={`snap-center shrink-0 w-[85vw] md:w-150 bg-white/30 dark:bg-white/5 border border-white/40 dark:border-white/10 rounded-3xl overflow-hidden hover:border-indigo-500/40 transition-all duration-700 group shadow-lg hover:shadow-indigo-500/10 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
+      className={`
+        group relative shrink-0  snap-center
+        transition-all duration-700 ease-out
+        ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}
+      `}
     >
-      <div className="h-80 w-full overflow-hidden relative">
-        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <img 
-          src={image} 
-          alt={title} 
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-        />
-        <div className="absolute top-4 right-4 z-20 flex gap-2">
-          {tags.map((tag,i) => (
-            <span key={i} className="px-3 py-1 bg-white/20 dark:bg-black/40 backdrop-blur-xl rounded-full text-[10px] font-bold text-slate-800 dark:text-white border border-white/20 uppercase tracking-widest">
-              {tag}
-            </span>
-          ))}
+      {/* --- Glass Container --- */}
+      <div className="
+        relative overflow-hidden rounded-4xl
+       
+        backdrop-blur-xl shadow-2xl
+        border border-white/50 dark:border-white/10
+        hover:shadow-indigo-500/20 dark:hover:shadow-indigo-900/30
+        transition-all duration-500
+      ">
+        
+        {/* Decorative linear Blob (Visible on Hover) */}
+        <div className="absolute -top-20 -right-20 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+        {/* --- Image Section --- */}
+        <div className="relative h-64 w-full overflow-hidden">
+          {/* Dark Overlay linear */}
+          <div className="absolute inset-0 bg-linear-to-t from-slate-900/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+          
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover aspect-video transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+          />
+          
+  
         </div>
-      </div>
-      <div className="p-8">
-        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-indigo-500 transition-colors">{title}</h3>
-        <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">{description}</p>
-        <div className="flex gap-6">
-          <Link to={`/project/${id}`} className="text-indigo-600 dark:text-indigo-400 font-bold hover:gap-2 transition-all flex items-center gap-1">
-            Live Demo <ExternalLink size={16} />
-          </Link>
+
+        {/* --- Content Section --- */}
+        <div className="relative p-6 pt-8 -mt-6 z-20">
+          
+
+
+          {/* Title with linear Text on Hover */}
+          <h3 className="text-2xl font-bold mb-3 tracking-tight
+            text-slate-800 dark:text-white 
+            group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-indigo-600 group-hover:to-indigo-600 dark:group-hover:from-indigo-400 dark:group-hover:to-indigo-400
+            transition-all duration-300">
+            {title}
+          </h3>
+
+          <p className="text-slate-600 dark:text-slate-300 mb-6 line-clamp-3 leading-relaxed text-sm font-medium text-justify tracking-tight">
+            {description}
+          </p>
+
+          {/* --- Action Footer --- */}
+          <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-200/50 dark:border-white/10">
+            <Link 
+              to={`/project/${id}`} 
+              className="relative inline-flex items-center gap-2 group/btn"
+            >
+              <span className="text-slate-900 dark:text-white font-bold text-sm tracking-wide group-hover/btn:text-indigo-600 dark:group-hover/btn:text-indigo-400 transition-colors">
+                View Project
+              </span>
+              <span className="bg-slate-100 p-2 rounded-full group-hover/btn:bg-indigo-500 group-hover/btn:text-white transition-all duration-300">
+                <ExternalLink size={14} className="group-hover/btn:rotate-45 transition-transform duration-300" />
+              </span>
+            </Link>
+          </div>
 
         </div>
       </div>
     </div>
   );
 };
-
-
