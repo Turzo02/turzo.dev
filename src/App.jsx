@@ -40,7 +40,7 @@ export default function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
       <main className="z-10 relative">
-         <Outlet />
+        <Outlet />
       </main>
 
       <footer className="w-full py-12 border-t border-slate-200 dark:border-white/5 bg-white/20 dark:bg-black/40 backdrop-blur-2xl">

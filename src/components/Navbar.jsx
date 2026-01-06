@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUpRight, Sun, Moon, Command } from 'lucide-react';
+import { useLocation } from 'react-router';
 
 export const Navbar = ({ theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   // Adds a slight lift effect when scrolling
   useEffect(() => {
@@ -24,9 +26,8 @@ export const Navbar = ({ theme, toggleTheme }) => {
             SYED <span className="text-neutral-400 dark:text-neutral-500">TURZO</span>
           </span>
         </div>
-
-        {/* Navigation Links - Centered Pill */}
-        <div className="hidden md:flex items-center bg-neutral-200/30 dark:bg-white/5 p-1 rounded-xl border border-white/20">
+        {
+          location.pathname === '/' &&         <div className="hidden md:flex items-center bg-neutral-200/30 dark:bg-white/5 p-1 rounded-xl border border-white/20">
           {['Home', 'About', 'Skills', 'Projects'].map((item) => (
             <a
               key={item}
@@ -37,17 +38,19 @@ export const Navbar = ({ theme, toggleTheme }) => {
             </a>
           ))}
         </div>
+        }
+
 
         {/* Actions */}
       <div className="flex items-center gap-3">
           <button
             onClick={toggleTheme}
-            className="p-2.5 rounded-xl border border-white/10 dark:border-white/5 bg-white/5 hover:bg-white/20 transition-all text-slate-600 dark:text-slate-400"
+            className="p-2.5 rounded-xl border cursor-pointer border-white/10 dark:border-white/5 bg-white/5 hover:bg-white/20 hover:shadow-xl transition-all text-slate-600 dark:text-slate-400"
           >
             {theme === 'dark' ? <Sun size={18} className="text-yellow-400" /> : <Moon size={18} />}
           </button>
 
-          <a
+   {  location.pathname === '/' &&     <a
             href="#contact"
             className="group/btn relative px-6 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-black rounded-xl text-[13px] font-bold transition-all hover:scale-[1.02] active:scale-[0.98] shadow-xl"
           >
@@ -55,7 +58,7 @@ export const Navbar = ({ theme, toggleTheme }) => {
               Get in Touch
               <ArrowUpRight size={16} className="transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
             </span>
-          </a>
+          </a>}
         </div>
 
       </div>

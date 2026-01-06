@@ -38,16 +38,16 @@ const ProjectDetails = () => {
         <div className="absolute top-[40%] left-[30%] h-75 w-75 bg-fuchsia-400/20 dark:bg-fuchsia-600/10 rounded-full blur-[60px] dark:blur-[100px]" />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 py-12 md:py-30">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 py-30 ">
         {/* 2. Navigation */}
         <button
           onClick={() => navigate("/")}
-          className="group mb-12 flex items-center gap-3 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-all uppercase tracking-widest"
+          className="group mb-12 flex items-center gap-3 text-sm font-bold text-slate-600 cursor-pointer dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-all uppercase tracking-widest"
         >
-          <div className="p-2 rounded-full border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-white/5 group-hover:bg-cyan-50 dark:group-hover:bg-cyan-500/20 group-hover:border-cyan-200 dark:group-hover:border-cyan-500/50 transition-all shadow-sm">
+          <div className="p-2 rounded-full border  border-slate-200 dark:border-white/10 bg-white/50 dark:bg-white/5 group-hover:bg-cyan-50 dark:group-hover:bg-cyan-500/20 group-hover:border-cyan-200 dark:group-hover:border-cyan-500/50 transition-all shadow-sm">
             <ArrowLeft size={16} />
           </div>
-          Back to Gallery
+          Back to HomePage
         </button>
 
         {/* 3. Hero Section (Title & Image) */}
