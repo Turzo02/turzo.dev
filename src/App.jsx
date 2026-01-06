@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Navbar } from "./components/Navbar";
 import { Outlet } from "react-router";
+import ShinyLoader from "./components/ShinyLoader";
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
@@ -23,6 +24,14 @@ export default function App() {
 
   const toggleTheme = () =>
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  // Loader state
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 700);
+    return () => clearTimeout(timer);
+  });
+
+  if (loading) return <ShinyLoader text="Syed TurzO" ></ShinyLoader>;
 
   return (
     <div
@@ -38,6 +47,7 @@ export default function App() {
       </div>
 
       <Navbar theme={theme} toggleTheme={toggleTheme} />
+
 
       <main className="z-10 relative">
         <Outlet />
