@@ -1,5 +1,6 @@
 import React from "react";
 import { Download, Github, Verified } from "lucide-react";
+import CreativeProfile from "../components/CreativeProfile";
 export const HeroSection = () => (
   <section
     id="home"
@@ -44,7 +45,7 @@ export const HeroSection = () => (
         </div>
       </div>
 
-      <div className="order-1 md:order-2 flex justify-center relative group">
+      {/* <div className="order-1 md:order-2 flex justify-center relative group">
         <div className="absolute inset-0 bg-black/20 dark:bg-bg-black/50 blur-[100px] rounded-full scale-70 group-hover:scale-90 transition-transform duration-1000"></div>
         <div className="relative w-full max-w-112.5 aspect-4/5 rounded-[3rem] overflow-hidden border border-white/40 dark:border-white/10 bg-white/10 dark:bg-black/20 shadow-2xl transition-all duration-700 group-hover:rotate-1">
           <img
@@ -64,7 +65,10 @@ export const HeroSection = () => (
             </div>
           </div>
         </div>
-      </div>
+
+      </div> */}
+      <CreativeProfile></CreativeProfile>
+
     </div>
   </section>
 );
