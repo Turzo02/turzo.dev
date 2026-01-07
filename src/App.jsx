@@ -3,6 +3,7 @@ import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Navbar } from "./components/Navbar";
 import { Outlet } from "react-router";
 import ShinyLoader from "./components/ShinyLoader";
+import AmbientCursorHalo from "./components/Glow/AmbientCursorHalo";
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
@@ -45,6 +46,7 @@ export default function App() {
         <div className="absolute bottom-[-10%] left-[-10%] w-225 h-225 bg-purple-600/15 dark:bg-purple-600/5 rounded-full blur-[180px] animate-float"></div>
         <div className="absolute top-[30%] left-[10%] w-100 h-100 bg-cyan-400/10 dark:bg-cyan-400/5 rounded-full blur-[140px]"></div>
       </div>
+      <AmbientCursorHalo></AmbientCursorHalo>
 
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 

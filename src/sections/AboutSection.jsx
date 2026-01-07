@@ -29,7 +29,7 @@ export const AboutSection = () => {
               </span>
             </h2>
             <div className="space-y-6 text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-sans tracking-wide max-w-3xl mx-auto px-4 md:px-0">
-              <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 font-medium italic">
+              <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 font-medium italic text-justify tracking-tight">
                 My journey into programming began when I was fascinated by how
                 websites could respond to user actions and create interactive
                 experiences. This curiosity led me to master frontend
@@ -37,13 +37,13 @@ export const AboutSection = () => {
                 grow into full-stack development.
               </p>
 
-              <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 font-medium italic">
+              <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 font-medium italic text-justify tracking-tight">
                 I focus on writing maintainable, high-performance code with
                 thoughtful design, ensuring every project is functional,
                 polished, and user-friendly.
               </p>
 
-              <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 font-medium italic">
+              <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 font-medium italic text-justify tracking-tight">
              My hobbies—traveling and gaming—keep me energized, sharpen my focus, and inspire new ways of thinking.
               </p>
             </div>

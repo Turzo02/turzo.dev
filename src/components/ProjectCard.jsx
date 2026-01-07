@@ -36,7 +36,7 @@ export const ProjectCard = ({ id, title, description, image }) => {
           <img
             src={image}
             alt={title}
-            className="w-full h-full object-cover aspect-video transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+            className="w-full h-full object-cover aspect-video transform group-hover:scale-100.5 transition-transform duration-300 ease-in-out"
           />
           
   
@@ -48,14 +48,14 @@ export const ProjectCard = ({ id, title, description, image }) => {
 
 
           {/* Title with linear Text on Hover */}
-          <h3 className="text-2xl font-bold mb-3 tracking-tight
+          <h3 className="text-2xl font-extrabold mb-3 tracking-tight
             text-slate-800 dark:text-white 
             group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-indigo-600 group-hover:to-indigo-600 dark:group-hover:from-indigo-400 dark:group-hover:to-indigo-400
             transition-all duration-300">
             {title}
           </h3>
 
-          <p className="text-slate-600 dark:text-slate-300 mb-6 line-clamp-3 leading-relaxed text-sm font-medium text-justify tracking-tight">
+          <p className="text-slate-600 dark:text-slate-300 mb-6 line-clamp-3 leading-relaxed text-sm font-medium text-justify italic tracking-tight">
             {description}
           </p>
 

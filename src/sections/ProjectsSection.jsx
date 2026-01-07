@@ -17,7 +17,7 @@ const ProjectsSection = () => {
             <h2 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-6 tracking-tight leading-[0.9]">
               SIGNATURE <br className="hidden md:block" /> WORKS
             </h2>
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed italic tracking-tight">
               Experimental builds and commercial projects that push the boundaries of frontend engineering.
             </p>
           </div>

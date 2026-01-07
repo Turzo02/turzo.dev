@@ -20,13 +20,14 @@ export const HeroSection = () => (
         {/* Professional Designation Heading */}
         <h1 className="text-6xl md:text-8xl font-black leading-[0.95] tracking-tighter text-slate-900 dark:text-white">
           FRONTEND{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-cyan-400">
+          <span 
+          className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 via-vi-500 to-cyan-400">
             WEB
           </span>{" "}
           DEVELOPER
         </h1>
 
-        <p className="text-xl text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed font-medium">
+        <p className="text-xl  max-w-lg leading-relaxed font-medium md:text-xl text-slate-700 dark:text-slate-300 italic text-justify tracking-tight">
           I build high-performance, responsive web interfaces with a focus on
           clean design and seamless full-stack integration to deliver
           functional, user-centric applications.

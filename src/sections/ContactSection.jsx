@@ -9,7 +9,7 @@ export const ContactSection = () => (
           <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-tight tracking-tighter">
             LET'S BUILD <br /> THE FUTURE
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-xl font-medium mb-12 max-w-sm leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-400 text-xl font-medium mb-12 max-w-sm leading-relaxed italic tracking-tight">
             Open to collaborations and visionary web development roles.
           </p>
         </div>
