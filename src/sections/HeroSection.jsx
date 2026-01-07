@@ -102,7 +102,7 @@ export const HeroSection = () => {
       id="home"
       className="min-h-screen w-full flex items-center justify-center pt-32 pb-12 px-4 md:px-8 overflow-hidden"
     >
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2  items-center">
+      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
         {/* Left Column */}
         <div
           ref={headlineRef}
@@ -121,7 +121,7 @@ export const HeroSection = () => {
             </span>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-black leading-[0.95] tracking-tighter text-slate-900 dark:text-white">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tighter text-slate-900 dark:text-white">
             FRONTEND{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 via-vi-500 to-cyan-400">
               WEB
