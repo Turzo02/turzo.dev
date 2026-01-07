@@ -1,17 +1,12 @@
 import React from "react";
 import { Zap, Heart, Camera } from "lucide-react";
-import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export const AboutSection = () => {
-  const [ref, isVisible] = useScrollReveal();
 
   return (
     <section id="about" className="w-full py-32 px-4 md:px-8">
       <div
-        ref={ref}
-        className={`max-w-7xl w-full mx-auto transition-all duration-1000 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
-        }`}
+        className="max-w-7xl w-full mx-auto"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Bio Text */}

@@ -1,10 +1,8 @@
 import React from 'react';
-import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export const ExperienceItem = ({ role, company, period, description, skills, isLatest }) => {
-  const [ref, isVisible] = useScrollReveal();
   return (
-    <div ref={ref} className={`relative pl-8 md:pl-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+    <div className="relative pl-8 md:pl-12 transition-all duration-1000">
       <div className={`absolute -left-2.25 top-0 h-4.5 w-4.5 rounded-full bg-white dark:bg-slate-900 border-4 ${isLatest ? 'border-indigo-500 animate-pulse' : 'border-slate-400 dark:border-slate-600'}`}></div>
       <div className="flex flex-col md:flex-row gap-6 md:gap-12">
         <div className="md:w-1/3">
