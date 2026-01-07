@@ -50,7 +50,7 @@ export const HeroSection = () => {
       // 3️⃣ Scroll-driven position animations (relative movement)
       // Badge: move left 50px
       gsap.to(badgeRef.current, {
-        x: -50,
+        x: -13,
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
@@ -61,7 +61,7 @@ export const HeroSection = () => {
 
       // Headline: move right 50px
       gsap.to(headlineRef.current, {
-        x: 150,
+        x: 40,
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
@@ -72,7 +72,7 @@ export const HeroSection = () => {
 
       // Buttons: move up 30px
       gsap.to(buttonsRef.current, {
-        x: -50,
+        x: -13,
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
@@ -102,7 +102,7 @@ export const HeroSection = () => {
       id="home"
       className="min-h-screen w-full flex items-center justify-center pt-32 pb-12 px-4 md:px-8 overflow-hidden"
     >
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2  items-center">
         {/* Left Column */}
         <div
           ref={headlineRef}
