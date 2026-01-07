@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 export const ContactSection = () => (
   <section id="contact" className="w-full py-40 px-4 md:px-8 relative">
-    <div className="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 bg-white/40 dark:bg-white/5 border border-white dark:border-white/10 backdrop-blur-3xl p-10 md:p-20 rounded-[4rem] shadow-2xl">
+    <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 bg-white/40 dark:bg-white/5 border border-white dark:border-white/10 backdrop-blur-3xl p-10 md:p-20 rounded-[4rem] shadow-2xl">
       <div className="flex flex-col justify-between py-4">
         <div>
           <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-tight tracking-tighter">

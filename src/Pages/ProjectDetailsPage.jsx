@@ -40,7 +40,7 @@ const ProjectDetails = () => {
       </div>
       <AmbientCursorHalo></AmbientCursorHalo>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 py-30 ">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-30 ">
         {/* 2. Navigation - Refined Tracking & Weight */}
         <button
           onClick={() => navigate("/")}

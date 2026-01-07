@@ -6,7 +6,7 @@ export const HeroSection = () => (
     id="home"
     className="min-h-screen w-full flex items-center justify-center pt-32 pb-12 px-4 md:px-8 overflow-hidden"
   >
-    <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
       <div className="flex flex-col gap-8 order-2 md:order-1">
         <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 dark:bg-indigo-500/5 w-fit backdrop-blur-xl">
           <span className="relative flex h-2 w-2">

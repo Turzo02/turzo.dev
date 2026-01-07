@@ -9,7 +9,7 @@ export const AboutSection = () => {
     <section id="about" className="w-full py-32 px-4 md:px-8">
       <div
         ref={ref}
-        className={`max-w-6xl w-full mx-auto transition-all duration-1000 ${
+        className={`max-w-7xl w-full mx-auto transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
         }`}
       >

@@ -56,7 +56,7 @@ export default function App() {
       </main>
 
       <footer className="w-full py-12 border-t border-slate-200 dark:border-white/5 bg-white/20 dark:bg-black/40 backdrop-blur-2xl">
-        <div className="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-slate-400 dark:text-slate-500 text-[10px] sm:text-xs font-medium tracking-[0.3em] uppercase transition-colors duration-300 hover:text-indigo-500">
             © 2026 Portfolio <span className="mx-2 opacity-30">|</span>
             <span className="font-semibold text-slate-600 dark:text-slate-300">

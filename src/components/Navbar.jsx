@@ -21,7 +21,7 @@ export const Navbar = ({ theme, toggleTheme }) => {
         scrolled ? "pt-3" : "pt-6"
       } px-4`}
     >
-      <div className="group relative flex items-center justify-between w-full max-w-6xl px-4 py-2 bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/40 dark:border-white/5 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)]">
+      <div className="group relative flex items-center justify-between w-full max-w-7xl px-4 py-2 bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/40 dark:border-white/5 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)]">
         {/* Logo Section */}
         <div className="flex items-center gap-3 pl-2">
           <div className="relative size-10 flex items-center justify-center overflow-hidden rounded-xl bg-neutral-900 dark:bg-white text-white dark:text-black shadow-2xl transition-transform duration-300 group-hover:rotate-45">

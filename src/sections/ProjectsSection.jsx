@@ -5,7 +5,7 @@ import { projects } from '../data/projects';
 const ProjectsSection = () => {
   return (
     <section id="projects" className="w-full py-20 md:py-32  px-4 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16 md:mb-24">
