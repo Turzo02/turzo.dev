@@ -40,6 +40,16 @@ export const Navbar = ({ theme, toggleTheme }) => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
+                onClick={(e) => {
+                  e.preventDefault(); // prevent default jump
+                  const target = document.getElementById(item.toLowerCase());
+                  if (target) {
+                    target.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }
+                }}
                 className="px-5 py-2 text-[13px] font-medium text-neutral-600 dark:text-neutral-400 hover:text-cyan-600 dark:hover:text-white rounded-lg transition-all duration-200 hover:bg-white/60 dark:hover:bg-white/10"
               >
                 {item}
@@ -64,6 +74,13 @@ export const Navbar = ({ theme, toggleTheme }) => {
           {location.pathname === "/" && (
             <a
               href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.getElementById("contact");
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }}
               className="group/btn relative px-6 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-black rounded-xl text-[13px] font-bold transition-all hover:scale-[1.02] active:scale-[0.98] shadow-xl"
             >
               <span className="flex items-center gap-2">
