@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Navbar } from "./components/Navbar";
 import { Outlet } from "react-router";
 import ShinyLoader from "./components/ShinyLoader";
 import AmbientCursorHalo from "./components/Glow/AmbientCursorHalo";
+import Lenis from "lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function App() {
+  const lenisRef = useRef(null);
+  const rafRef = useRef(null);
+
   const [theme, setTheme] = useState(() => {
     // Initialize from localStorage or system preference
     const saved = localStorage.getItem("theme");
@@ -16,6 +22,73 @@ export default function App() {
       ? "dark"
       : "light";
   });
+
+  // Initialize Lenis and ScrollTrigger
+  useEffect(() => {
+    // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Initialize Lenis
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: "vertical",
+      gestureDirection: "vertical",
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    lenisRef.current = lenis;
+
+    // Connect ScrollTrigger to Lenis
+    const scrollFn = () => {
+      ScrollTrigger.update();
+    };
+
+    lenis.on("scroll", scrollFn);
+
+    // Sync ScrollTrigger with Lenis
+    ScrollTrigger.scrollerProxy(document.documentElement, {
+      scrollTop(value) {
+        if (arguments.length) {
+          lenis.scrollTo(value);
+        }
+        return lenis.scroll;
+      },
+      getBoundingClientRect() {
+        return {
+          top: 0,
+          left: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        };
+      },
+    });
+
+    // Update ScrollTrigger on window resize
+    ScrollTrigger.defaults({ scroller: document.documentElement });
+
+    // RequestAnimationFrame loop
+    const raf = (time) => {
+      lenis.raf(time);
+      ScrollTrigger.update();
+      rafRef.current = requestAnimationFrame(raf);
+    };
+
+    rafRef.current = requestAnimationFrame(raf);
+
+    // Cleanup
+    return () => {
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
+      lenis.destroy();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
 
   // Persist theme to localStorage and update DOM
   useEffect(() => {
