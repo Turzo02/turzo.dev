@@ -15,7 +15,7 @@ export const ProjectCard = ({ id, title, description, image }) => {
       <div className="
         relative overflow-hidden rounded-4xl
        
-        backdrop-blur-xl shadow-2xl
+        backdrop-blur-xl shadow-lg dark:shadow-2xl
         border border-white/50 dark:border-white/10
         hover:shadow-indigo-500/20 dark:hover:shadow-indigo-900/30
         transition-all duration-500
