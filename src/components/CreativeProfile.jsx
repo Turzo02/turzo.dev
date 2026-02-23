@@ -1,6 +1,6 @@
 import React from "react";
 import { Command, Sparkles } from "lucide-react";
-
+import profileImg from "../assets/profile.jpg";
 const CreativeProfileExtreme = () => {
   return (
     <>
@@ -28,7 +28,7 @@ const CreativeProfileExtreme = () => {
         <div className="relative w-full max-w-md aspect-4/5">
           <div className="absolute inset-0 w-full h-full overflow-hidden animate-fluid-extreme border-2 border-white/20 dark:border-white/80 shadow-2xl bg-white/5  backdrop-blur-sm z-10 transition-all duration-300 group-hover:border-white/80 dark:group-hover:border-white/90">
             <img
-              src="https://i.ibb.co/C3Dpp6p1/brown.jpg"
+              src={profileImg}
               className="w-full h-full object-cover rotate-2 group-hover:scale-[1.005]  transition-transform duration-700 ease-out dark:opacity-90 mix-blend-luminosity group-hover:mix-blend-normal"
               alt="Profile"
             />

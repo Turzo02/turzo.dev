@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ArrowUpRight, Command, X } from "lucide-react";
+import { ArrowUpRight, Command, ExternalLink, X } from "lucide-react";
 import { useLocation } from "react-router";
 import { RiMoonClearLine, RiSunLine } from "react-icons/ri";
 
@@ -80,7 +80,7 @@ export const Navbar = ({ theme, toggleTheme }) => {
                 onClick={() => handleScrollTo("contact")}
                 className="hidden md:flex items-center gap-2 px-6 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-black rounded-xl text-[13px] font-bold cursor-pointer"
               >
-                Get in Touch <ArrowUpRight size={16} />
+                Get in Touch <ExternalLink size={16} />
               </button>
             )}
           </div>
@@ -95,39 +95,8 @@ export const Navbar = ({ theme, toggleTheme }) => {
         />
       )}
 
-      {/* Side Menu */}
-      {/* <aside
-        className={`fixed top-0 left-0 h-full w-64  bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/40 dark:border-white/5 rounded-r-2xl shadow-xl z-50 transform transition-transform duration-300 ${
-          menuOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
-          <span className="font-black text-lg">Menu</span>
-          <button onClick={() => setMenuOpen(false)}>
-            <X />
-          </button>
-        </div>
 
-        <div className="flex flex-col p-6 gap-4">
-          {navItems.map((item) => (
-            <button
-              key={item}
-              onClick={() => handleScrollTo(item.toLowerCase())}
-              className="text-left hover:text-indigo-500 transition cursor-pointer px-5 py-3 bg-neutral-900 dark:bg-white text-white dark:text-black rounded-xl font-bold"
-            >
-              {item}
-            </button>
-          ))}
-
-          <button
-            onClick={() => handleScrollTo("contact")}
-            className="flex items-center gap-2 px-5 py-3 bg-neutral-900 dark:bg-white text-white dark:text-black rounded-xl font-bold"
-          >
-            Get in Touch <ArrowUpRight size={16} />
-          </button>
-        </div>
-
-      </aside> */}
+ 
 
       <aside
         className={`fixed top-0 left-0 h-full w-72 z-50 
@@ -189,7 +158,7 @@ export const Navbar = ({ theme, toggleTheme }) => {
         shadow-lg
         cursor-pointer"
           >
-            Get in Touch <ArrowUpRight size={18} />
+            Get in Touch <ExternalLink size={18} />
           </button>
         </div>
       </aside>

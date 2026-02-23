@@ -1,4 +1,25 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+.app {
+  position: relative;
+  overflow-x: hidden;
+}
 
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.overlay.hide {
+  transform: translateY(-100%);
+}

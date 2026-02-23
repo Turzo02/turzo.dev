@@ -1,9 +1,12 @@
+import ticket from "/src/assets/ticket_zone.png"
+import freelance from "/src/assets/freelancing_marketplace.png"
+import appStore from "/src/assets/app_store.png"
 export const projects = [
     {
     id: 1,
     title: "TicketZone",
     image:
-      "https://i.ibb.co.com/3yh5dYtY/ticket-ZOne.png",
+      ticket,
     tags: ["MongoDB", "Express", "React", "Node.js", "Stripe", "Firebase"],
     description:
       "A production-level MERN stack ticket booking platform supporting Bus, Train, Flight, and Ship bookings. It features role-based dashboards for Users, Vendors, and Admins, integrated with Stripe for secure payments.",
@@ -26,7 +29,7 @@ export const projects = [
     id: 2,
     title: "My App Store",
     image:
-      "https://i.ibb.co.com/jkFK1qwc/app-Store.png",
+      appStore,
     tags: ["React", "Tailwind", "Recharts", "GSAP", "localStorage", "Firebase"],
     description:
       "A modern, responsive web application that showcases trending apps. It features data visualization with Recharts, smooth GSAP animations, and persistent app installations using LocalStorage.",
@@ -49,7 +52,7 @@ export const projects = [
     id: 3,
     title: "Freelance MarketPlace",
     image:
-      "https://i.ibb.co.com/RG123nZ0/Screenshot-2025-11-19-132812.png",
+      freelance,
     tags: [
       "React",
       "Firebase",

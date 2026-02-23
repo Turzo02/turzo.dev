@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Download, Github } from "lucide-react";
+import { Download, ExternalLink, Github, View } from "lucide-react";
 import CreativeProfile from "../components/CreativeProfile";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -136,8 +136,9 @@ export const HeroSection = () => {
           </p>
 
           <div className="flex flex-wrap gap-5 pt-4" ref={buttonsRef}>
-            <button className="flex items-center justify-center gap-3 h-14 px-8 bg-indigo-600 text-white text-lg font-bold cursor-pointer rounded-2xl hover:bg-indigo-700 transition-all shadow-2xl shadow-indigo-500/40 active:scale-95">
-              Resume <Download size={20} />
+            <button onClick={() => window.open("https://drive.google.com/file/d/1__pqZsf7SSVXuYvlBZLAHOQ7n-aHsP2h/view", "_blank")} 
+            className="flex items-center justify-center gap-3 h-14 px-8 bg-indigo-600 text-white text-lg font-bold cursor-pointer rounded-2xl hover:bg-indigo-700 transition-all shadow-2xl shadow-indigo-500/40 active:scale-95">
+              Resume <ExternalLink  size={20} />
             </button>
             <button
               onClick={() =>
