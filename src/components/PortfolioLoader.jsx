@@ -102,7 +102,7 @@ const PortfolioLoader   = () => {
 
           <div className="flex justify-between items-start">
             <div className="space-y-1">
-              <h2 className="text-zinc-100 text-sm font-bold tracking-[0.3em] uppercase transition-all duration-500">
+              <h2 className="text-zinc-100 text-sm font-display font-bold tracking-[0.3em] uppercase transition-all duration-500">
                 {statusPhrases[statusIndex]}
               </h2>
               <p className="text-zinc-500 text-[10px] tracking-widest font-mono">

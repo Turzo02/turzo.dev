@@ -31,7 +31,7 @@ const ProjectDetails = () => {
     );
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 selection:bg-cyan-500/30 relative overflow-hidden font-sans transition-colors duration-500">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 selection:bg-cyan-500/30 relative overflow-hidden font-body transition-colors duration-500">
       <title>{project.title}</title>
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-125 h-12 bg-violet-400/30 dark:bg-violet-600/20 rounded-full blur-[80px] dark:blur-[120px]" />
@@ -44,7 +44,7 @@ const ProjectDetails = () => {
         {/* 2. Navigation - Refined Tracking & Weight */}
         <button
           onClick={() => navigate("/")}
-          className="group mb-12 flex items-center gap-3 text-[11px] font-black text-slate-500 cursor-pointer dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-all uppercase tracking-[0.2em]"
+          className="group mb-12 flex items-center gap-3 text-[11px] font-display font-bold text-slate-500 cursor-pointer dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-all uppercase tracking-[0.2em]"
         >
           <div className="p-2 rounded-full border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-white/5 group-hover:bg-cyan-50 dark:group-hover:bg-cyan-500/20 group-hover:border-cyan-200 dark:group-hover:border-cyan-500/50 transition-all shadow-sm">
             <ArrowLeft size={14} />
@@ -65,7 +65,7 @@ const ProjectDetails = () => {
                 </span>
               ))}
             </div>
-            <h1 className="text-6xl md:text-8xl font-black text-slate-900 dark:text-white leading-[0.9] tracking-tighter mb-8 italic">
+            <h1 className="text-6xl md:text-8xl font-display font-extrabold text-slate-900 dark:text-white leading-[0.9] tracking-tighter mb-8">
               {project.title}
             </h1>
           </div>
@@ -107,18 +107,18 @@ const ProjectDetails = () => {
           <div className="lg:col-span-2 space-y-8">
             {/* Description Card - High Readability Body Text */}
             <div className="p-10 rounded-3xl bg-white/60 dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-sm dark:shadow-none">
-              <h2 className="text-xs font-black uppercase tracking-[0.3em] text-violet-600 dark:text-violet-400 mb-6 flex items-center gap-3">
+              <h2 className="text-xs font-display font-bold uppercase tracking-[0.3em] text-violet-600 dark:text-violet-400 mb-6 flex items-center gap-3">
                 <Layers size={18} />
                 Overview
               </h2>
-              <p className="text-xl md:text-2xl font-medium text-slate-800 dark:text-slate-100 leading-tight tracking-tight text-justify italic">
+              <p className="text-xl md:text-2xl font-medium text-slate-800 dark:text-slate-100 leading-tight tracking-tight">
                 {project.description}
               </p>
             </div>
 
             {/* Features Grid */}
             <div>
-              <h2 className="text-xs font-black uppercase tracking-[0.3em] text-cyan-600 dark:text-cyan-400 mb-6 flex items-center gap-3 px-2">
+              <h2 className="text-xs font-display font-bold uppercase tracking-[0.3em] text-cyan-600 dark:text-cyan-400 mb-6 flex items-center gap-3 px-2">
                 <Cpu size={18} />
                 Core Capabilities
               </h2>
@@ -143,19 +143,19 @@ const ProjectDetails = () => {
           {/* Sidebar Content */}
           <div className="space-y-8">
             <div className="p-8 rounded-3xl bg-white/60 dark:bg-white/5 dark:bg-linear-to-br dark:from-orange-500/10 dark:to-transparent dark:border-orange-500/20 backdrop-blur-md relative overflow-hidden group shadow-sm dark:shadow-none">
-              <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-orange-600 dark:text-orange-400 mb-6 flex items-center gap-2">
+              <h3 className="text-[11px] font-display font-bold uppercase tracking-[0.2em] text-orange-600 dark:text-orange-400 mb-6 flex items-center gap-2">
                 <AlertCircle size={16} /> Technical Challenges
               </h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm font-medium leading-relaxed italic tracking-tight text-justify">
+              <p className="text-slate-600 dark:text-slate-400 text-sm font-medium leading-relaxed">
                 {project.challenges}
               </p>
             </div>
 
             <div className="p-8 rounded-3xl bg-white/60 dark:bg-white/5 dark:bg-linear-to-br dark:from-emerald-500/10 dark:to-transparent border border-emerald-200 dark:border-emerald-500/20 backdrop-blur-md relative overflow-hidden group shadow-sm dark:shadow-none">
-              <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-400 mb-6 flex items-center gap-2">
+              <h3 className="text-[11px] font-display font-bold uppercase tracking-[0.2em] text-emerald-600 dark:text-emerald-400 mb-6 flex items-center gap-2">
                 <Code2 size={16} /> Roadmap
               </h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm font-medium leading-relaxed italic tracking-tight text-justify">
+              <p className="text-slate-600 dark:text-slate-400 text-sm font-medium leading-relaxed">
                 {project.potentialImprovements}
               </p>
             </div>

@@ -26,7 +26,7 @@ const CreativeProfileExtreme = () => {
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-indigo-500/10 dark:bg-indigo-900/30 blur-[100px] rounded-full scale-75 group-hover:scale-100 transition-transform duration-700" />
 
         <div className="relative w-full max-w-md aspect-4/5">
-          <div className="absolute inset-0 w-full h-full overflow-hidden animate-fluid-extreme border-2 border-white/20 dark:border-white/80 shadow-2xl bg-white/5  backdrop-blur-sm z-10 transition-all duration-300 group-hover:border-white/80 dark:group-hover:border-white/90">
+          <div className="absolute inset-0 w-full h-full overflow-hidden animate-fluid-extreme border-2 border-white/20 dark:border-white/80 shadow-2xl bg-white/5 backdrop-blur-sm z-10 transition-all duration-300 group-hover:border-white/80 dark:group-hover:border-white/90 noise-overlay">
             <img
               src={profileImg}
               className="w-full h-full object-cover rotate-2 group-hover:scale-[1.005]  transition-transform duration-700 ease-out dark:opacity-90 mix-blend-luminosity group-hover:mix-blend-normal"
@@ -42,7 +42,7 @@ const CreativeProfileExtreme = () => {
                 <Command size={18} strokeWidth={2.5} />
               </div>
 
-              <p className="text-slate-800 dark:text-white font-bold text-sm whitespace-nowrap cursor-pointer">
+              <p className="text-slate-800 dark:text-white font-display font-bold text-sm whitespace-nowrap cursor-pointer tracking-tight">
                 SyeD TurzO 
               </p>
             </div>

@@ -42,8 +42,8 @@ export const Navbar = ({ theme, toggleTheme }) => {
               <Command size={20} />
             </button>}
 
-            <span className=" font-bold tracking-tight text-neutral-800 dark:text-neutral-100">
-              SYED <span className="text-neutral-400">TURZO</span>
+            <span className="font-display font-bold tracking-tight text-neutral-800 dark:text-neutral-100">
+              SYED <span className="text-indigo-500">TURZO</span>
             </span>
           </div>
 
@@ -54,7 +54,7 @@ export const Navbar = ({ theme, toggleTheme }) => {
                 <button
                   key={item}
                   onClick={() => handleScrollTo(item.toLowerCase())}
-                  className="px-5 py-2 text-[13px] font-medium text-neutral-600 dark:text-neutral-400 hover:text-cyan-600 rounded-lg transition cursor-pointer"
+                  className="px-5 py-2 text-sm font-display font-medium text-neutral-600 dark:text-neutral-400 hover:text-indigo-500 dark:hover:text-indigo-400 rounded-lg transition-all duration-300 cursor-pointer hover:bg-indigo-500/5"
                 >
                   {item}
                 </button>
@@ -66,19 +66,21 @@ export const Navbar = ({ theme, toggleTheme }) => {
           <div className="flex items-center gap-3">
             <button
               onClick={toggleTheme}
-              className="p-2.5 rounded-xl border border-slate-900/30 dark:border-white/5 bg-white/40 dark:bg-white/5 cursor-pointer"
+              className="p-2.5 rounded-xl   dark:border-white/5  dark:bg-white/5 cursor-pointer hover:bg-white/60 dark:hover:bg-white/10 transition-all duration-300 group"
             >
-              {theme === "dark" ? (
-                <RiSunLine className="text-cyan-400" />
-              ) : (
-                <RiMoonClearLine />
-              )}
+              <div className="transition-all duration-500 ease-in-out group-hover:scale-110">
+                {theme === "dark" ? (
+                  <RiSunLine className="text-amber-400 animate-[spin_0.5s_ease-out]" size={20} />
+                ) : (
+                  <RiMoonClearLine className="text-slate-700 animate-[spin_0.5s_ease-out]" size={20} />
+                )}
+              </div>
             </button>
 
             {location.pathname === "/" && (
               <button
                 onClick={() => handleScrollTo("contact")}
-                className="hidden md:flex items-center gap-2 px-6 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-black rounded-xl text-[13px] font-bold cursor-pointer"
+                className="hidden md:flex items-center gap-2 px-6 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-black rounded-xl text-sm font-display font-bold cursor-pointer hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300"
               >
                 Get in Touch <ExternalLink size={16} />
               </button>
@@ -111,7 +113,7 @@ export const Navbar = ({ theme, toggleTheme }) => {
       >
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-6 border-b border-black dark:border-white/50 ">
-          <span className="font-bold text-xl text-neutral-800 dark:text-white tracking-tight">
+          <span className="font-display font-bold text-xl text-neutral-800 dark:text-white tracking-tight">
             Menu
           </span>
           <button
@@ -135,7 +137,7 @@ export const Navbar = ({ theme, toggleTheme }) => {
                 key={item}
                 onClick={() => handleScrollTo(item.toLowerCase())}
                 className={`
-            group flex items-center font-bold w-full px-5 py-2 rounded-lg text-left text-md text-slate-900 dark:text-white
+            group flex items-center font-display font-bold w-full px-5 py-2 rounded-lg text-left text-md text-slate-900 dark:text-white
             transition-all duration-300 ease-out
                     hover:translate-x-1 hover:bg-white/40 dark:hover:bg-white/30 hover:shadow-lg hover:shadow-indigo-500/5 cursor-pointer  
             
@@ -152,7 +154,7 @@ export const Navbar = ({ theme, toggleTheme }) => {
           {/* CTA Button */}
           <button
             onClick={() => handleScrollTo("contact")}
-            className="relative flex items-center justify-center gap-2 w-full px-5 py-4 rounded-2xl font-bold 
+            className="relative flex items-center justify-center gap-2 w-full px-5 py-4 rounded-2xl font-display font-bold 
         text-white dark:text-black
         bg-neutral-900 dark:bg-white
         shadow-lg

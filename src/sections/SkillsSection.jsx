@@ -69,7 +69,7 @@ export const SkillsSection = () => {
         <div className="flex flex-col items-center mb-20">
           <h2
             ref={headlineRef}
-            className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 tracking-tight"
+            className="text-4xl md:text-5xl font-display font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight text-center"
           >
             Technical Expertise
           </h2>

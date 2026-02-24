@@ -12,19 +12,19 @@ const ProjectsSection = () => {
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
               <span className="w-8 h-0.5 bg-indigo-500"></span>
-              <span className="text-indigo-500 font-bold tracking-widest text-sm uppercase">Selected Portfolio</span>
+              <span className="text-indigo-500 font-display font-bold tracking-widest text-sm uppercase">Selected Portfolio</span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-6 tracking-tight leading-[0.9]">
+            <h2 className="text-5xl md:text-7xl font-display font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight leading-[0.9]">
               SIGNATURE <br className="hidden md:block" /> WORKS
             </h2>
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed italic tracking-tight">
+            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
               Experimental builds and commercial projects that push the boundaries of frontend engineering.
             </p>
           </div>
           
           {/* Optional Counter for UI Polish */}
           <div className="hidden md:block">
-            <span className="text-8xl font-black text-slate-400 dark:text-white/5 select-none">
+            <span className="text-8xl font-display font-extrabold text-indigo-500/10 dark:text-white/5 select-none tracking-tighter">
               {projects.length.toString().padStart(2, '0')}
             </span>
           </div>

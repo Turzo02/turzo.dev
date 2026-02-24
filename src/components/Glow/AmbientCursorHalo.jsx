@@ -68,7 +68,7 @@ const AmbientCursorHalo = () => {
       <div
         ref={primaryHaloRef}
         className="absolute top-0 left-0 w-[40vw] h-[40vw] md:w-[25vw] md:h-[25vw] 
-                   bg-cyan-400/30 dark:bg-indigo-500/15 
+                   bg-teal-400/25 dark:bg-indigo-500/12 
                    rounded-full blur-[80px] md:blur-[100px] 
                    mix-blend-multiply dark:mix-blend-screen 
                    will-change-transform"
@@ -78,7 +78,7 @@ const AmbientCursorHalo = () => {
       <div
         ref={secondaryHaloRef}
         className="absolute top-0 left-0 w-[60vw] h-[60vw] md:w-[40vw] md:h-[40vw] 
-                   bg-cyan-300/20 dark:bg-fuchsia-600/10 
+                   bg-violet-300/15 dark:bg-violet-600/8 
                    rounded-full blur-[100px] md:blur-[120px] 
                    mix-blend-multiply dark:mix-blend-screen 
                    will-change-transform"

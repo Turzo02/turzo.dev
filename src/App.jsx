@@ -110,7 +110,7 @@ export default function App() {
 
   return (
     <div
-      className={`app min-h-screen transition-colors duration-700 font-display ${
+      className={`app min-h-screen transition-colors duration-700 font-body ${
         theme === "dark" ? "bg-[#0a0a0c]" : "bg-slate-50"
       } selection:bg-indigo-500 selection:text-white`}
     >
@@ -118,9 +118,9 @@ export default function App() {
         <div>
           {/* Halo Glow Effects */}
           <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-            <div className="absolute top-[-10%] right-[-5%] w-200 h-200 bg-indigo-600/20 dark:bg-indigo-600/10 rounded-full blur-[160px] animate-pulse"></div>
-            <div className="absolute bottom-[-10%] left-[-10%] w-225 h-225 bg-purple-600/15 dark:bg-purple-600/5 rounded-full blur-[180px] animate-float"></div>
-            <div className="absolute top-[30%] left-[10%] w-100 h-100 bg-cyan-400/10 dark:bg-cyan-400/5 rounded-full blur-[140px]"></div>
+            <div className="absolute top-[-10%] right-[-5%] w-200 h-200 bg-indigo-600/15 dark:bg-indigo-600/8 rounded-full blur-[160px] animate-pulse"></div>
+            <div className="absolute bottom-[-10%] left-[-10%] w-225 h-225 bg-violet-600/12 dark:bg-violet-600/5 rounded-full blur-[180px]" style={{animation: 'float 20s ease-in-out infinite'}}></div>
+            <div className="absolute top-[30%] left-[10%] w-100 h-100 bg-teal-400/8 dark:bg-teal-400/4 rounded-full blur-[140px]"></div>
           </div>
           <AmbientCursorHalo></AmbientCursorHalo>
 
@@ -134,7 +134,7 @@ export default function App() {
             <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
               <p className="text-slate-400 dark:text-slate-500 text-[10px] sm:text-xs font-medium tracking-[0.3em] uppercase transition-colors duration-300 hover:text-indigo-500">
                 © 2026 Portfolio <span className="mx-2 opacity-30">|</span>
-                <span className="font-semibold text-slate-600 dark:text-slate-300">
+                <span className="font-display font-bold text-slate-600 dark:text-slate-300">
                   Syed Naimul Islam{" "}
                   <span className="hidden sm:inline">TurzO</span>
                 </span>

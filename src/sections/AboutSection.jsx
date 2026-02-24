@@ -95,36 +95,37 @@ export const AboutSection = () => {
             <div className="about-headline flex flex-col gap-8 opacity-0">
               <div className="flex items-center gap-4 text-indigo-500">
                 <div className="h-px w-12 bg-indigo-500/50"></div>
-                <span className="text-sm font-black uppercase tracking-[0.3em]">
+                <span className="text-sm font-display font-bold uppercase tracking-[0.3em]">
                   The Narrative
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
-                Beyond the Code: <br />
+              <h2 className="text-4xl md:text-5xl font-display font-extrabold text-slate-900 dark:text-white leading-tight tracking-tight">
+                Beyond the Code <br />
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-500 to-indigo-500">
                   A Story of Curiosity
                 </span>
               </h2>
             </div>
 
-            <div className="about-bio space-y-6 text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-sans tracking-wide max-w-3xl mx-auto px-4 md:px-0">
-              <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 font-medium italic text-justify tracking-tight opacity-0">
+            <div className="about-bio space-y-5">
+              <p className="font-body text-lg leading-8 text-slate-600 dark:text-slate-300 text-justify opacity-0">
                 My journey into programming began when I was fascinated by how
                 websites could respond to user actions and create interactive
                 experiences. This curiosity led me to master frontend
                 development and explore basic backend integration, with plans to
                 grow into full-stack development.
               </p>
-              <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 font-medium italic text-justify tracking-tight opacity-0">
+              <p className="font-body text-lg leading-8 text-slate-600 dark:text-slate-300 text-justify opacity-0">
                 I focus on writing maintainable, high-performance code with
                 thoughtful design, ensuring every project is functional,
                 polished, and user-friendly.
               </p>
-              <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 font-medium italic text-justify tracking-tight opacity-0">
+              <p className="font-body text-lg leading-8 text-slate-600 dark:text-slate-300 text-justify opacity-0">
                 My hobbies—traveling and gaming—keep me energized, sharpen my
                 focus, and inspire new ways of thinking.
               </p>
             </div>
+
           </div>
 
           {/* Personality Cards */}
@@ -134,10 +135,10 @@ export const AboutSection = () => {
                 <Zap size={28} />
               </div>
               <div className="mt-12">
-                <h4 className="text-slate-900 dark:text-white font-black text-xl mb-2">
+                <h4 className="text-slate-900 dark:text-white font-display font-bold text-xl mb-2">
                   Philosophy
                 </h4>
-                <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed italic">
+                <p className="font-body text-sm leading-6 text-slate-500 dark:text-slate-400">
                   Build with intention, design for clarity. Clean, maintainable
                   code and smooth performance define truly elegant solutions.
                 </p>
@@ -148,10 +149,10 @@ export const AboutSection = () => {
               <div className="size-10 rounded-xl bg-pink-500/20 text-pink-500 flex items-center justify-center">
                 <Heart size={20} />
               </div>
-              <p className="text-slate-900 dark:text-white font-bold text-sm">
+              <p className="text-slate-900 font-display dark:text-white font-bold text-xl">
                 Loves
               </p>
-              <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed italic">
+              <p className="font-body text-sm leading-6 text-slate-500 dark:text-slate-400">
                 Open Source, Dark Mode, React, Next.js, Tailwind, Clean Folders,
                 Eye-Catching UI, Subtle Animations, Micro-Interactions
               </p>
@@ -161,10 +162,10 @@ export const AboutSection = () => {
               <div className="size-10 rounded-xl bg-cyan-500/20 text-cyan-500 flex items-center justify-center">
                 <Camera size={20} />
               </div>
-              <p className="text-slate-900 dark:text-white font-bold text-sm">
+              <p className="text-slate-900 font-display dark:text-white font-bold text-xl">
                 Hobbies
               </p>
-              <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed italic">
+              <p className="font-body text-sm leading-6 text-slate-500 dark:text-slate-400">
                 Playing Cricket, Video Editing, Traveling
               </p>
             </div>

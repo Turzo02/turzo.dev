@@ -25,31 +25,9 @@ export const projects = [
     potentialImprovements:
       "I plan to integrate a real-time notification system using Socket.io to alert users when their booking is accepted or rejected by a vendor. Additionally, implementing a seat-selection map for buses and trains would significantly enhance the user experience.",
   },
+
   {
     id: 2,
-    title: "My App Store",
-    image:
-      appStore,
-    tags: ["React", "Tailwind", "Recharts", "GSAP", "localStorage", "Firebase"],
-    description:
-      "A modern, responsive web application that showcases trending apps. It features data visualization with Recharts, smooth GSAP animations, and persistent app installations using LocalStorage.",
-    demoUrl: "https://updatedplaystore.netlify.app/",
-    codeUrl: "https://github.com/Turzo02/App-Store",
-
-    features: [
-      "Real-time search and dynamic filtering",
-      "Interactive review statistics using Recharts",
-      "Persistent 'My Installation' page using LocalStorage",
-      "Smooth animations with GSAP and OGL",
-      "Advanced sorting by download counts",
-    ],
-    challenges:
-      "One of the main challenges was managing the application state for installed apps and ensuring data persistence across page reloads. Implementing smooth route transitions while maintaining performance with GSAP animations also required careful optimization of React's lifecycle.",
-    potentialImprovements:
-      "In the future, I plan to integrate Firebase for real-time user authentication and a global database. I also aim to add a dark mode toggle and implement a more robust backend to handle user-generated reviews and ratings.",
-  },
-  {
-    id: 3,
     title: "Freelance MarketPlace",
     image:
       freelance,
@@ -81,6 +59,29 @@ export const projects = [
       "Implementing protected routes while ensuring a smooth user experience during Firebase's initial auth state check was a significant challenge. Managing complex state across 'My Accepted Tasks' and 'My Job Postings' required careful architecting of the database structure to avoid unnecessary re-renders.",
     potentialImprovements:
       "I plan to implement a real-time chat system using Firebase Firestore for better client-freelancer communication. Additionally, adding a payment gateway integration (like SSLCommerz or Stripe) would turn this into a production-ready platform.",
-  }
+  },
+    {
+    id: 3,
+    title: "My App Store",
+    image:
+      appStore,
+    tags: ["React", "Tailwind", "Recharts", "GSAP", "localStorage", "Firebase"],
+    description:
+      "A modern, responsive web application that showcases trending apps. It features data visualization with Recharts, smooth GSAP animations, and persistent app installations using LocalStorage.",
+    demoUrl: "https://updatedplaystore.netlify.app/",
+    codeUrl: "https://github.com/Turzo02/App-Store",
+
+    features: [
+      "Real-time search and dynamic filtering",
+      "Interactive review statistics using Recharts",
+      "Persistent 'My Installation' page using LocalStorage",
+      "Smooth animations with GSAP and OGL",
+      "Advanced sorting by download counts",
+    ],
+    challenges:
+      "One of the main challenges was managing the application state for installed apps and ensuring data persistence across page reloads. Implementing smooth route transitions while maintaining performance with GSAP animations also required careful optimization of React's lifecycle.",
+    potentialImprovements:
+      "In the future, I plan to integrate Firebase for real-time user authentication and a global database. I also aim to add a dark mode toggle and implement a more robust backend to handle user-generated reviews and ratings.",
+  },
 
 ];

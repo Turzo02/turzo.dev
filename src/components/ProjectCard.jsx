@@ -18,6 +18,7 @@ export const ProjectCard = ({ id, title, description, image }) => {
         backdrop-blur-xl shadow-lg dark:shadow-2xl
         border border-white/50 dark:border-white/10
         hover:shadow-indigo-500/20 dark:hover:shadow-indigo-900/30
+        hover:ring-1 hover:ring-indigo-500/20
         transition-all duration-500
       ">
         
@@ -44,14 +45,14 @@ export const ProjectCard = ({ id, title, description, image }) => {
 
 
           {/* Title with linear Text on Hover */}
-          <h3 className="text-2xl font-extrabold mb-3 tracking-tight
+          <h3 className="text-xl font-display font-extrabold mb-3 tracking-tight
             text-slate-800 dark:text-white 
             group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-indigo-600 group-hover:to-indigo-600 dark:group-hover:from-indigo-400 dark:group-hover:to-indigo-400
-            transition-all duration-300">
+            transition-all duration-300 line-clamp-1">
             {title}
           </h3>
 
-          <p className="text-slate-600 dark:text-slate-300 mb-6 line-clamp-3 leading-relaxed text-sm font-medium text-justify italic tracking-tight">
+          <p className="text-slate-600 dark:text-slate-400 mb-6 line-clamp-3 leading-relaxed text-sm font-medium ">
             {description}
           </p>
 
@@ -61,7 +62,7 @@ export const ProjectCard = ({ id, title, description, image }) => {
               to={`/project/${id}`} 
               className="relative inline-flex items-center gap-2 group/btn"
             >
-              <span className="text-slate-900 dark:text-white font-bold text-sm tracking-wide group-hover/btn:text-indigo-600 dark:group-hover/btn:text-indigo-400 transition-colors">
+              <span className="text-slate-900 dark:text-white font-display font-bold text-sm tracking-wide group-hover/btn:text-indigo-600 dark:group-hover/btn:text-indigo-400 transition-colors">
                 View Project
               </span>
               <span className="bg-slate-100 p-2 rounded-full group-hover/btn:bg-indigo-500 group-hover/btn:text-white transition-all duration-300">

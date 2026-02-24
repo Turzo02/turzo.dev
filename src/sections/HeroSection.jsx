@@ -100,7 +100,7 @@ export const HeroSection = () => {
     <section
       ref={sectionRef}
       id="home"
-      className="min-h-screen w-full flex items-center justify-center pt-32 pb-12 px-4 md:px-8 overflow-hidden"
+      className="w-full flex items-center justify-center pt-32 pb-12 px-4 md:px-8 overflow-hidden"
     >
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
         {/* Left Column */}
@@ -116,20 +116,20 @@ export const HeroSection = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
             </span>
-            <span className="text-[10px] font-black text-indigo-600 dark:text-indigo-400 tracking-[0.2em] uppercase">
+            <span className="text-[10px] font-display font-bold text-indigo-600 dark:text-indigo-400 tracking-[0.2em] uppercase">
               Open for Innovation
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tighter text-slate-900 dark:text-white">
-            FRONTEND{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 via-vi-500 to-cyan-400">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-extrabold leading-[0.95] tracking-tighter text-slate-900 dark:text-white">
+            FRONTEND<br />
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 via-violet-500 to-teal-400">
               WEB
-            </span>{" "}
+            </span><br />
             DEVELOPER
           </h1>
 
-          <p className="text-xl max-w-lg leading-relaxed font-medium md:text-xl text-slate-700 dark:text-slate-300 italic text-justify tracking-tight">
+          <p className="font-body text-lg leading-8 text-slate-600 dark:text-slate-300 text-justify pr-4">
             I build high-performance, responsive web interfaces with a focus on
             clean design and seamless full-stack integration to deliver
             functional, user-centric applications.
@@ -137,14 +137,14 @@ export const HeroSection = () => {
 
           <div className="flex flex-wrap gap-5 pt-4" ref={buttonsRef}>
             <button onClick={() => window.open("https://drive.google.com/file/d/1__pqZsf7SSVXuYvlBZLAHOQ7n-aHsP2h/view", "_blank")} 
-            className="flex items-center justify-center gap-3 h-14 px-8 bg-indigo-600 text-white text-lg font-bold cursor-pointer rounded-2xl hover:bg-indigo-700 transition-all shadow-2xl shadow-indigo-500/40 active:scale-95">
+            className="flex items-center justify-center gap-3 h-14 px-8 bg-indigo-600 text-white text-lg font-display font-bold cursor-pointer rounded-2xl hover:bg-indigo-700 transition-all shadow-2xl shadow-indigo-500/40 hover:shadow-indigo-500/50 active:scale-95">
               Resume <ExternalLink  size={20} />
             </button>
             <button
               onClick={() =>
                 window.open("https://github.com/Turzo02", "_blank")
               }
-              className="flex items-center justify-center gap-3 h-14 px-8 bg-white/20 dark:bg-white/5 border border-slate-300 dark:border-white/10 hover:border-indigo-500/50 text-slate-900 dark:text-white text-base font-bold cursor-pointer rounded-2xl transition-all backdrop-blur-xl"
+              className="flex items-center justify-center gap-3 h-14 px-8 bg-white/20 dark:bg-white/5 border border-slate-300 dark:border-white/10 hover:border-indigo-500/50 text-slate-900 dark:text-white text-base font-display font-bold cursor-pointer rounded-2xl transition-all backdrop-blur-xl hover:shadow-lg hover:shadow-indigo-500/10"
             >
               GitHub <Github size={20} />
             </button>
